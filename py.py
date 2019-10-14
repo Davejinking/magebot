@@ -24,7 +24,7 @@ async def on_message(message):
     channel = message.channel #channel이라는 변수에는 메시지를 받은 채널의 ID를 담습니다.
 
     if message.content.startswith('!커맨드'): #만약 해당 메시지가 '!커맨드' 로 시작하는 경우에는
-        await client.send_message(channel, '커맨드') #봇은 해당 채널에 '커맨드' 라고 말합니다.
+        await client.send_message(channel, '커맨드(작성중)') #봇은 해당 채널에 '커맨드' 라고 말합니다.
     else: #위의 if에 해당되지 않는 경우
         #메시지를 보낸사람을 호출하며 말한 메시지 내용을 그대로 출력해줍니다.
         await client.send_message(channel, "<@"+id+">님이 \""+message.content+"\"라고 말하였습니다.")
