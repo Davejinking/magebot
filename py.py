@@ -1,11 +1,8 @@
 import asyncio
 import discord
+import os
 
 client = discord.Client()
-
-# 1-6에서 생성된 토큰을 이곳에 입력해주세요.
-token = "your_token"
-
 # 봇이 구동되었을 때 동작되는 코드입니다.
 @client.event
 async def on_ready():
@@ -32,4 +29,5 @@ async def on_message(message):
         #메시지를 보낸사람을 호출하며 말한 메시지 내용을 그대로 출력해줍니다.
         await client.send_message(channel, "<@"+id+">님이 \""+message.content+"\"라고 말하였습니다.")
 
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
