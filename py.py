@@ -26,7 +26,7 @@ async def on_message(message):
         await client.send_message(channel, '커맨드(작성중)') #봇은 해당 채널에 '커맨드' 라고 말합니다.
     else: #위의 if에 해당되지 않는 경우
         #메시지를 보낸사람을 호출하며 말한 메시지 내용을 그대로 출력해줍니다.
-        await client.send_message(channel, "<@"+id+">님이 \""+message.content+"\"라고 말하였습니다.")
+        await client.send_message(channel, "<@"+id+"> 네놈이 \""+message.content+"\"라고 기침소리를 내었는가")
 
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
