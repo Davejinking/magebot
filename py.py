@@ -24,7 +24,7 @@ async def on_message(message):
 
     if message.content.startswith('!커맨드'): #만약 해당 메시지가 '!커맨드' 로 시작하는 경우에는
         await client.send_message(channel, '!help') #봇은 해당 채널에 '커맨드' 라고 말합니다.
-    else if message.content.startswith('윤마게'): #위의 if에 해당되지 않는 경우
+    else: #위의 if에 해당되지 않는 경우
         #메시지를 보낸사람을 호출하며 말한 메시지 내용을 그대로 출력해줍니다.
         await client.send_message(channel, "<@"+id+"> 네놈이 \""+message.content+"\"라고 기침소리를 내었는가")
 
