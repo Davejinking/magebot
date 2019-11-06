@@ -30,6 +30,7 @@ async def on_message(message):
         #await client.send_message(channel, "<@"+id+"> 네놈이 \""+message.content+"\"라고 기침소리를 내었는가")
 
     if message.content.startswith('!경고부여'): # '!경고부여' 으로 시작하는 명령어를 감지한다면,
+        await client.send_message(channel, '---경고시스템 작동중---')
       if message.content[6:].startswith('<@'): # in 구문을 써도 되지만, 우린 아직 안배웠습니다. 여하튼 디스코드의 언급은 "<@(유저 ID)>"의 형태라서 "<@"으로 시작하면 유저를 언급했다고 봐도 됩니다.
         mention_id = re.findall(r'\d+', message.content) # 아래와 같은 절차를 거쳐 경고를 부여할 유저의 ID를 추출합시다.(사실상 message.content라는 변수에서 숫자만 뽑아내는겁니다.) re라는 모듈에 대한 강좌는 추후 진행하겠습니다.
         mention_id = mention_id[0]
